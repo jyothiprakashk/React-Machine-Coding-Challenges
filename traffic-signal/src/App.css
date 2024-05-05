@@ -1,0 +1,17 @@
+.signalLight {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.signalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
