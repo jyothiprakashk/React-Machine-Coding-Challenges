@@ -1,0 +1,11 @@
+.folderName {
+  background-color: lightgray;
+  width: fit-content;
+  padding: 4px 10px;
+}
+
+.folderContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
