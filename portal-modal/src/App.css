@@ -1,0 +1,48 @@
+.modalWrapper {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  box-shadow: 3px 4px 10px 10px whitesmoke;
+  width: 30%;
+  height:auto;
+  background-color: white;
+}
+
+.ModalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+
+.modalFooter {
+  display: flex;
+  gap: 8px;
+  text-align: right;
+  justify-content: right;
+  border-top: 1px solid gray;
+  padding: 12px
+}
+
+.modalFooter > div {
+  cursor: pointer;
+}
+
+.content p {
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+}
+
+.content {
+  padding: 8px
+}
+
+.OpenModal {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
