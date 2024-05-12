@@ -1,0 +1,71 @@
+.postContainer {
+  border: 1px solid gray;
+  padding: 4px
+}
+
+body {
+  margin: 4px;
+}
+
+.titleBody {
+  height: 40px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popOverContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.popOverBlock {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.sizeShow {
+  border-bottom: 1px solid gainsboro;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.totalPageSize {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.paginationPages {
+  padding: 6px 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.footerPagination {
+  display: flex;
+  gap: 8px;
+  height:fit-content ;
+}
+
+.footer {
+  padding-top: 8px;
+}
+
+.pagination__selected {
+  background-color: gray;
+}
