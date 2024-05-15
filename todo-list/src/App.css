@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todoListContainer {
+  display: flex;
+}
+
+
+.buttonGroups {
+  display: flex;
+  gap: 4px;
+}
+
+.buttonGroups > div {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #e3dede;
+  cursor: pointer;
+}
+
+.inputTodo {
+  gap: 8px;
+  display: flex;
+}
+
+.inputTodo button {
+  border: none;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.inputTodo input {
+  width: 216px;
+  border-radius: 4px;
+  border: 1px solid gainsboro;
+}
+
+.buttonGroups .active {
+  background-color: #1fc2f6;
+}
