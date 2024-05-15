@@ -1,0 +1,18 @@
+.countDownWrapper {
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.countDownWrapper p {
+  font-size: 28px;
+}
+
+.countDownWrapper > div {
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
