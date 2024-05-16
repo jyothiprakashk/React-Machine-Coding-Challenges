@@ -1,0 +1,79 @@
+.dark-mode {
+  --background-color: #000;
+  --color: #fff;
+  
+}
+
+.white-mode {
+  --background-color: #fff;
+  --color: #000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.switch {
+  position: relative;
+  padding: 2px 4px;
+  width: 60px;
+  height: 28px;
+  display: inline-block;
+}
+
+.switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .round {
+  background-color: #2196f3;
+}
+
+input:checked + .round::before {
+  transform: translateX(33px);
+}
+
+.slider .round {
+  border-radius: 50%;
+}
+
+.darkModeWrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.themeName {
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
