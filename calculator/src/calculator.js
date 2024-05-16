@@ -1,7 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import React, { useContext } from "react";
+import { CalculatorContext } from "./App";
+
 export const Calculator = () => {
-  const [input, setInput] = useState("");
+  const { state, dispatch } = useContext(CalculatorContext);
+
   const onHandleCalculate = (e) => {
     const buttonValue = e.target.innerHTML;
     switch (buttonValue) {
@@ -9,29 +11,30 @@ export const Calculator = () => {
         calculateResult();
         break;
       case "Reset":
-        setInput("");
+        dispatch({type:"CLEAR_INPUT",payload:""})
         break;
       case "DEL":
-        setInput((prevInput) => prevInput.slice(0, -1));
+        dispatch({type:"SET_INPUT",payload:state.input.slice(0,-1)})
         break;
       default:
-        setInput((prevInput) => prevInput + buttonValue);
+        dispatch({type:"APPEND_INPUT",payload:buttonValue})
     }
   };
 
   const calculateResult = () => {
     try {
-      const result = eval(input);
-      setInput(String(result));
+      const result = eval(state.input);
+      dispatch({type:"SET_INPUT",payload:String(result)})
     } catch (error) {
-      console.error("Error:", error);
-      setInput("Error");
+      dispatch({type:"SET_INPUT",payload:"Error"})
+
     }
   };
 
+  console.log(state,'stateinput')
   return (
     <div className="App">
-      <input readOnly value={input} />
+      <input readOnly value={state.input} />
       <div className="buttonWrapper">
         <div onClick={onHandleCalculate} className="calculatorWrapper">
           <button>7</button>
