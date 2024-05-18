@@ -1,0 +1,59 @@
+input {
+  width: 500px;
+  height: 40px;
+  border: 1px solid gainsboro;
+  border-radius: 30px;
+}
+
+.userContainer {
+  font-size: 18px;
+  font-family: sans-serif;
+  cursor: pointer;
+  height: 300px;
+  border: 1px solid lightgray;
+  overflow: scroll;
+  width: 200px;
+  box-shadow: 0px 12px 40px 8px white;
+  left: 12px;
+  position: relative;
+  bottom: 6px;
+  background-color: white;
+}
+
+.userDetails {
+  display: flex;
+  gap: 4px;
+  background-color: black;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.selectedUsers {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.deleteUser {
+  color: red;
+  cursor: pointer;
+}
+
+.userImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.suggestion-list {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 4px;
+  gap: 4px;
+  align-items: center;
+}
