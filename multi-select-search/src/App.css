@@ -1,32 +1,47 @@
 input {
-  width: 500px;
   height: 40px;
   border: 1px solid gainsboro;
   border-radius: 30px;
+}
+
+.user-search-container {
+  display: flex;
 }
 
 .userContainer {
   font-size: 18px;
   font-family: sans-serif;
   cursor: pointer;
-  height: 300px;
+  max-height: 300px;
   border: 1px solid lightgray;
   overflow: scroll;
-  width: 200px;
   box-shadow: 0px 12px 40px 8px white;
-  left: 12px;
-  position: relative;
-  bottom: 6px;
   background-color: white;
+  position: absolute;
 }
 
-.userDetails {
+.user-pill {
   display: flex;
   gap: 4px;
   background-color: black;
   color: white;
   padding: 4px 12px;
   border-radius: 16px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.user-pill img {
+  width: 16px;
+  height: 16px;
 }
 
 .selectedUsers {
@@ -37,6 +52,24 @@ input {
 
 .inputContainer {
   display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.inputContainer input {
+  border: none;
+  height: 20px;
+  padding: 5px;
+}
+
+.inputContainer input:focus {
+  outline: none;
 }
 
 .deleteUser {
