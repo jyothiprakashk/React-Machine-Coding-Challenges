@@ -1,28 +1,28 @@
 import "./App.css";
 import { useState, useCallback, useMemo } from "react";
 import React from "react";
+import UseMemo from "./useMemo";
+import SlowComponent from "./useCallback";
 
-const TestComponent = React.memo((props) => {
-  console.log(props, "chikld");
-  return <div></div>;
-});
-
+// https://www.freecodecamp.org/news/difference-between-usememo-and-usecallback-hooks/
 
 function App() {
-  const [sortElements] = useState('');
+  const [value, setValue] = useState("");
   const [count, setCount] = useState(0);
 
-  const SortFunction=useCallback(()=>{
-    console.log(sortElements,"sorted")
-  },[])
-
-
-
+  const handleClick = useCallback(() => {
+    setValue("Jyothi");
+  }, [value]);
 
   return (
     <div className="App">
-      <TestComponent SortFunction={SortFunction}/>
+      {/* UseCallback */}
+      <SlowComponent handleClick={handleClick} />
       <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>
+
+      {/* UseMemo */}
+
+      {/* <UseMemo /> */}
     </div>
   );
 }
